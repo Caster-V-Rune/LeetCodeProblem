@@ -1,9 +1,12 @@
 # Definition for singly-linked list.
 import math
+
+
 class ListNode:
     def __init__(self, x):
         self.val = x
         self.next = None
+
 
 class Solution:
     # @return a ListNode
@@ -22,23 +25,17 @@ class Solution:
         p = head
         i = 0
         while p is not None:
-            num = num + p.val * math.pow(10, i)
+            num += p.val * math.pow(10, i)
             p = p.next
             i += 1
         return num
 
-    def test(self, a, b):
-        h1 = self.encode(a)
-        h2 = self.encode(b)
-        n1 = self.decode(h1)
-        n2 = self.decode(h2)
-        return n1, n2
-
     def addTwoNumbers(self, l1, l2):
-        a = self.decode(l1)
-        b = self.decode(l2)
-        c = a + b
-        return self.encode(c)
+        n1 = self.decode(l1)
+        n2 = self.decode(l2)
+        ans = n1 + n2
+        return self.encode(ans)
+
 
 if __name__ == '__main__':
     test = Solution()
