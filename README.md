@@ -1,2 +1,6 @@
 # LeetCodeProblem
 LeetCode Problem
+
+###sumTwo
+> 排序过不了必须哈希了...
+> 时间复杂度竟然不是照理论最劣给的数据...
